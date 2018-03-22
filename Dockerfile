@@ -3,7 +3,6 @@ FROM ubuntu:16.04
 USER root
 WORKDIR /root
 
-ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 COPY CMDMININET.sh /
 
