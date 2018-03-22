@@ -3,11 +3,19 @@ FROM ubuntu:16.04
 RUN mkdir -p /home/images
 WORKDIR /home/images
 
+ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    iproute2 \
+    iputils-ping \
+    net-tools \
     mininet \
     tcpdump \
-    wireshark
-
+    wireshark \
+    vim \
+    x11-xserver-utils \
+    xterm 
 
 EXPOSE 6653 6633
-
