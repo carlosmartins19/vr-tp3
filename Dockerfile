@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     iproute2 \
     iputils-ping \
-    mininet \
     net-tools \
+    mininet \
     tcpdump \
     wireshark \
     vim \
