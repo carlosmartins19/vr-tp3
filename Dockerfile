@@ -5,6 +5,7 @@ WORKDIR /home/images
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
+COPY CMDMININET.sh /
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
@@ -16,6 +17,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wireshark \
     vim \
     x11-xserver-utils \
-    xterm 
+    xterm \
+&& chmod +x /CMDMININET.sh
 
 EXPOSE 6653 6633
+
+
+ENTRYPOINT ["/CMDMININET.sh"]
