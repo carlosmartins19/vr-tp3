@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-RUN mkdir -p /home/images
-WORKDIR /home/images
+USER root
+WORKDIR /root
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     vim \
     x11-xserver-utils \
     xterm \
-&& rm -rf /var/lib/apt/lists/* \
-&& chmod +x /CMDMININET.sh
+ && rm -rf /var/lib/apt/lists/* \
+ && chmod +x /ENTRYPOINT.sh
 
 EXPOSE 6653 6633 6640
 
