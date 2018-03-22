@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/* \
  && chmod +x /CMDMININET.sh
 
-EXPOSE 6653 6633 6640
+EXPOSE 6633 6653 6640
 
 
 ENTRYPOINT ["/CMDMININET.sh"]
